@@ -31,8 +31,8 @@ iptables -t nat -I OUTPUT -p tcp -j clash_local
 iptables -t nat -I OUTPUT -p icmp -j clash_local
 
 # udp
-#ip rule add fwmark 1 table 100
-#ip route add local default dev lo table 100
+ip rule add fwmark 1 table 100
+ip route add local default dev lo table 100
 iptables -t mangle -N clash
 iptables -t mangle -A clash -d 0.0.0.0/8 -j RETURN
 iptables -t mangle -A clash -d 10.0.0.0/8 -j RETURN

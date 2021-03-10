@@ -48,12 +48,6 @@ function _install() {
     assert_command systemctl "This script support systemd only"
     assert_command ip "This script support iproute2 only"
 
-    ip rule help 2>&1 | grep "uidrange" > /dev/null 2> /dev/null
-    if [ "$?" != "0" ];then
-        echo "iproute2 not support uid filter"
-        exit 1
-    fi
-
     if [ ! -f "./clash" ]; then
         echo "Clash binary ./clash not found"
         echo "Try ./install.sh build to build clash with tun support"
