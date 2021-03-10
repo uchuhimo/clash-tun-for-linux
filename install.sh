@@ -29,7 +29,8 @@ function _build() {
     rm -rf clash_build
 
     echo "Build clash with tun support"
-    assert git clone -b add-water https://github.com/comzyh/clash clash_build
+    assert git clone https://github.com/Dreamacro/clash clash_build
+    # assert git clone -b add-water https://github.com/comzyh/clash clash_build
 
     pushd clash_build > /dev/null
     LANG=C assert make $target
@@ -81,7 +82,7 @@ function _install() {
     echo "Tun Device - clash0"
     echo ""
     echo "Use 'systemctl start clash-tun' to start clash"
-    echo "Use 'systemctl enable clash' to enable clash start with system boot"
+    echo "Use 'systemctl enable clash-tun' to enable clash start with system boot"
 }
 
 function _uninstall() {

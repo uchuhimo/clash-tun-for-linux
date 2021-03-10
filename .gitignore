@@ -1,3 +1,6 @@
 clash_build
 config.yaml
 clash
+Country.mmdb
+clash-linux-amd64
+*.gz
