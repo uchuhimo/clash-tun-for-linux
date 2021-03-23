@@ -20,4 +20,7 @@
 3. **Install**
    ```bash
    sudo ./install.sh install
+   sudo cp config.yaml /srv/clash/
+   sudo systemctl start clash-tun
+   sudo systemctl enable clash-tun
    ```
