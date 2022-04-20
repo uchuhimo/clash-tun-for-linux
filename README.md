@@ -23,4 +23,5 @@
    sudo cp config.yaml /srv/clash/
    sudo systemctl start clash-tun
    sudo systemctl enable clash-tun
+   sudo ./iptables.sh
    ```
